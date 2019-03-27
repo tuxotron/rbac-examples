@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: full-control
+  namespace: tuxotron
+subjects:
+- kind: User
+  name: tuxotron
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: tuxotron-full-control
+  apiGroup: rbac.authorization.k8s.io
